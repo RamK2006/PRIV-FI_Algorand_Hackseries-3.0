@@ -1,10 +1,10 @@
-﻿# PRIV-FI â€” Privacy-Preserving Credit Oracle
+﻿# PRIV-FI ” Privacy-Preserving Credit Oracle
 
 **Algorand Bharat Hack Series 3.0**
 
 > 400M+ credit-invisible Indians â€¢ Zero raw data on-chain â€¢ Soulbound credentials â€¢ Undercollateralized loans
 
-âš ï¸ **THIS IS 100% ALGORAND.** No Solidity. No EVM. No ethers.js. No MetaMask. Every on-chain component uses algopy + PuyaPy + AlgoKit. Every frontend call uses algosdk v3.
+**THIS IS 100% ALGORAND.** No Solidity. No EVM. No ethers.js. No MetaMask. Every on-chain component uses algopy + PuyaPy + AlgoKit. Every frontend call uses algosdk v3.
 
 ## Architecture
 
