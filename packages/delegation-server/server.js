@@ -16,6 +16,7 @@
  * in AlgorandPRIV-FI_PrototypeFINAL_Documentation.docx, Section 4, Feature 7.
  */
 
+
 const express = require('express');
 const cors = require('cors');
 const crypto = require('crypto');
