@@ -1,0 +1,9 @@
+{
+  "network": "testnet",
+  "ProofRegistry": 0,
+  "MicroLender": 0,
+  "MicroLenderAddress": "",
+  "algodURL": "https://testnet-api.4160.nodely.dev",
+  "indexerURL": "https://testnet-idx.4160.nodely.dev",
+  "explorerBase": "https://testnet.explorer.perawallet.app"
+}

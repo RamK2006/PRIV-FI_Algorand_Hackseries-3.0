@@ -1,0 +1,16 @@
+{
+  "name": "privfi-mock-fip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PRIV-FI Mock FIP (Account Aggregator) Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}

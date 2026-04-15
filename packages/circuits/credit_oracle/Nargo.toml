@@ -1,0 +1,7 @@
+[package]
+name = "credit_oracle"
+type = "bin"
+authors = ["PRIV-FI Team"]
+compiler_version = ">=0.32.0"
+
+[dependencies]

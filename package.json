@@ -1,0 +1,21 @@
+{
+  "name": "privfi",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:mock-fip\" \"npm run dev:delegation\" \"npm run dev:frontend\"",
+    "dev:mock-fip": "npm run start --workspace=packages/mock-fip",
+    "dev:delegation": "npm run start --workspace=packages/delegation-server",
+    "dev:frontend": "npm run dev --workspace=packages/frontend",
+    "export:circuit": "node packages/circuits/scripts/export-circuit.js",
+    "compile:contracts": "cd packages/contracts && algokit compile python smart_contracts/",
+    "test:contracts": "cd packages/contracts && python -m pytest tests/ -v",
+    "deploy:testnet": "cd packages/contracts && python scripts/deploy.py",
+    "build": "npm run build --workspace=packages/frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

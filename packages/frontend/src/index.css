@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════
+   PRIV-FI — Professional Design System
+   Privacy-Preserving Credit Oracle for Algorand
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #020617; /* surface-950 */
+  color: #e2e8f0; /* surface-200 */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+  color: #fff;
+}
+
+*:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Component Classes ─── */
+@layer components {
+  .card {
+    @apply bg-surface-900/80 border border-surface-700/40 rounded-xl shadow-card;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .card-interactive {
+    @apply card transition-all duration-200;
+  }
+
+  .card-interactive:hover {
+    @apply border-surface-600/60 shadow-card-hover;
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    @apply px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium rounded-lg transition-all duration-200;
+  }
+
+  .btn-primary:active {
+    @apply bg-brand-700;
+    transform: scale(0.98);
+  }
+
+  .btn-secondary {
+    @apply px-5 py-2.5 bg-surface-800 hover:bg-surface-700 text-surface-200 text-sm font-medium rounded-lg border border-surface-600/40 transition-all duration-200;
+  }
+
+  .btn-accent {
+    @apply px-5 py-2.5 bg-accent-600 hover:bg-accent-500 text-white text-sm font-medium rounded-lg transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md;
+  }
+
+  .badge-success {
+    @apply badge bg-success-500/10 text-success-400 border border-success-500/20;
+  }
+
+  .badge-danger {
+    @apply badge bg-danger-500/10 text-danger-400 border border-danger-500/20;
+  }
+
+  .badge-brand {
+    @apply badge bg-brand-500/10 text-brand-400 border border-brand-500/20;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent-500/10 text-accent-400 border border-accent-500/20;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2.5 bg-surface-800 border border-surface-600/50 rounded-lg text-surface-100 text-sm placeholder-surface-500 transition-all duration-200;
+  }
+
+  .input-field:focus {
+    @apply border-brand-500/60 ring-1 ring-brand-500/20 outline-none;
+  }
+
+  .terminal-log {
+    @apply font-mono text-xs p-3 bg-surface-950 border border-surface-800 rounded-lg overflow-auto;
+  }
+
+  .divider {
+    @apply border-t border-surface-800;
+  }
+
+  .section-label {
+    @apply text-[11px] font-semibold uppercase tracking-wider text-surface-400;
+  }
+}
+
+/* ─── Utility Classes ─── */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #a78bfa, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-dot-live {
+    @apply status-dot bg-success-400;
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+
+  .status-dot-offline {
+    @apply status-dot bg-surface-500;
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Inputs */
+input, textarea {
+  font-family: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
