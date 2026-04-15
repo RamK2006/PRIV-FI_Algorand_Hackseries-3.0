@@ -2,7 +2,7 @@
 # Dependencies
 # ========================
 node_modules/
-package-lock.json
+
 
 # ========================
 # Environment & Secrets
@@ -82,3 +82,4 @@ coverage/
 # Hackathon prompt/buildspec extracts (not source code)
 prompt_extracted.txt
 buildspec_extracted.txt
+.vercel
